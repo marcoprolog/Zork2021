@@ -6,11 +6,11 @@ namespace Zork2021
 {
     class Area
     {
-        string name;
-        string description;
+        public string name;
+        public string description;
         //todo add list of items
 
-        //connections ad key -> value       direction -> another area
+        //connections as key -> value       direction -> another area
         Dictionary<Directions, Area> connections = new Dictionary<Directions, Area>();
 
         public Area(string name, string description)
