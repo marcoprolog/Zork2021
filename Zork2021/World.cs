@@ -35,9 +35,9 @@ namespace Zork2021
         /// <summary>
         /// Prints in the console the description of the current area
         /// </summary>
-        internal void PrintCurrentAreaDescription()
+        public void PrintCurrentAreaDescription()
         {
-            
+            Console.WriteLine(currentArea.description);
         }
 
         /// <summary>
@@ -45,9 +45,14 @@ namespace Zork2021
         /// </summary>
         /// <param name="direction"></param>
         /// <returns>true if successful, false if the move was not possible</returns>
-        internal bool Go(Directions direction)
+        public bool Go(Directions direction)
         {
-            throw new NotImplementedException();
+            if(currentArea.connections.ContainsKey(direction))
+            {
+                currentArea = currentArea.connections[direction];
+                return true;
+            }
+            return false;
         }
     }
 }
