@@ -11,7 +11,7 @@ namespace Zork2021
         //todo add list of items
 
         //connections as key -> value       direction -> another area
-        Dictionary<Directions, Area> connections = new Dictionary<Directions, Area>();
+        public Dictionary<Directions, Area> connections = new Dictionary<Directions, Area>();
 
         public Area(string name, string description)
         {

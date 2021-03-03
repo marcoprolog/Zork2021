@@ -19,6 +19,7 @@ namespace Zork2021
                 {
                     case "go":
                         // move the player to a different area
+                        // your second argument is in commands[1]
                         
                         break;
                     case "examine":
